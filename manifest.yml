@@ -1,0 +1,5 @@
+applications:
+- name: PaaS-GCS-VoiceNoteIO
+  random-route: true
+  path: ./
+  memory: 128M
