@@ -34,8 +34,8 @@ const multer = Multer({
 });
 
 
-app.post('/audios/new', multer.single('file'), (req, res, next) => {
-  const { userId, audioId } = req.body
+app.post('/audios/:userId/:audioId', multer.single('file'), (req, res, next) => {
+  const { userId, audioId } = req.params;
 
   if (!req.file) {
     res.status(400).send('No file uploaded.');
